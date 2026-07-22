@@ -272,4 +272,14 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+/* Smaller image for the Electrostamping card */
+.tech-card img.electrostamp-preview {
+  width: 45%;          /* adjust size here */
+  max-width: 280px;    /* hard cap so it never gets huge */
+  display: block;
+  margin: 0.5rem auto; /* centers the image */
+  border-radius: 6px;
+}
+
+
 
