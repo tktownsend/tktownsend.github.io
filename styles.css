@@ -272,6 +272,16 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;   /* NEW */
+}
+
+
+
+
 /* Smaller image for the Electrostamping card */
 .tech-card img.electrostamp-preview {
   width: 45%;          /* adjust size here */
