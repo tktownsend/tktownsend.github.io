@@ -1,261 +1,272 @@
 /* Base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #05070b;
-  color: #e5e9f5;
-  line-height: 1.6;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #1a1a1a;
+    background-color: #f7f7f9;
 }
 
 a {
-  color: #7cfb9b;
-  text-decoration: none;
+    color: #004b8d;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* Layout */
+/* Header */
+
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 3rem;
-  background: #05070b;
-  border-bottom: 1px solid #1b2335;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+    background-color: #0b1b2b;
+    color: #ffffff;
+    padding: 1.5rem 2rem;
 }
 
 .logo-block {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.logo-block img {
-  height: 56px;
+.logo {
+    height: 64px;
+    width: auto;
 }
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
+.company-meta h1 {
+    margin: 0;
+    font-size: 1.6rem;
 }
 
-.logo-title {
-  font-weight: 600;
-  letter-spacing: 0.04em;
+.company-meta p {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
 }
 
-.logo-tagline {
-  font-size: 0.85rem;
-  color: #9fb3d9;
+.main-nav {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .main-nav a {
-  margin-left: 1.5rem;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #c7d2f5;
+    font-size: 0.95rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+    color: #ffffff;
 }
 
-.main-nav a.active {
-  color: #7cfb9b;
-  border-bottom: 2px solid #7cfb9b;
-  padding-bottom: 0.25rem;
+.main-nav a.active,
+.main-nav a:hover {
+    border-bottom-color: #ffcc33;
 }
 
-.hero,
-.page-hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 3rem 3rem 2rem;
-  gap: 2.5rem;
+/* Hero & sections */
+
+.hero {
+    padding: 2rem 2rem 1rem;
 }
 
-.page-hero {
-  flex-direction: column;
+.hero-text h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.8rem;
 }
 
-.hero-content h1,
-.page-hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+.hero-text p {
+    margin: 0;
+    max-width: 720px;
 }
 
-.hero-content p,
-.page-hero p {
-  max-width: 720px;
-  color: #c7d2f5;
+/* What We Do */
+
+.what-we-do {
+    padding: 1.5rem 2rem 2rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e5;
+    border-bottom: 1px solid #e0e0e5;
 }
 
-.hero-actions {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 1rem;
+.what-we-do h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
 }
 
-.hero-image img {
-  max-width: 380px;
-  border-radius: 8px;
-  border: 1px solid #1b2335;
+.what-we-do p {
+    margin: 0;
+    max-width: 800px;
 }
 
-.image-caption {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #9fb3d9;
+/* Extra space under the main paragraph */
+
+.what-we-do-spacing {
+    margin-top: 1rem;
 }
 
-/* Buttons */
-.btn-primary,
-.btn-secondary {
-  display: inline-block;
-  padding: 0.7rem 1.4rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+/* Core capabilities */
+
+.core-capabilities-summary,
+.capabilities-section {
+    padding: 2rem;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, #2af598, #009efd);
-  color: #05070b;
+.core-capabilities-summary h3,
+.capabilities-section h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
-.btn-secondary {
-  border: 1px solid #7cfb9b;
-  color: #7cfb9b;
+.capability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Sections */
-.identifiers,
-.what-we-do,
-.story-section,
-.leadership-grid,
-.photo-strip,
-.capabilities-grid,
-.tech-section,
-.contact-grid,
-.download-section {
-  padding: 2rem 3rem;
+.capability-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
 }
 
-.identifiers h2,
-.what-we-do h2,
-.story-section h2,
-.leadership-grid h2,
-.photo-strip h2,
-.capabilities-grid h1,
-.capabilities-grid h2,
-.tech-section h1,
-.tech-section h2,
-.contact-grid h1,
-.contact-grid h2,
-.download-section h2 {
-  margin-bottom: 1rem;
+.capability-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
-.id-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.75rem;
+.capability-card p {
+    margin: 0 0 0.75rem;
 }
 
-.id-item {
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  background: #0b1020;
-  border: 1px solid #1b2335;
+.capability-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
 }
 
-/* Feature / Capability cards */
-.feature-grid,
-.capabilities-grid,
-.leadership-grid,
-.photo-strip .photo-grid,
-.tech-section,
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+/* Technology highlights */
+
+.highlight-grid {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
-.feature-card,
-.capability-card,
-.leader-card,
-.tech-card,
-.contact-card {
-  background: #0b1020;
-  border-radius: 8px;
-  border: 1px solid #1b2335;
-  padding: 1.25rem;
+.highlight-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
 }
 
-.feature-card h3,
-.capability-card h2,
-.leader-card h3,
-.tech-card h2,
-.contact-card h2 {
-  margin-bottom: 0.75rem;
+.highlight-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
-.leader-card img,
-.capability-card img,
-.tech-card img,
-.photo-strip img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 0.75rem;
+.highlight-card p {
+    margin: 0 0 0.75rem;
+}
+
+.highlight-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Research section */
+
+.research-section {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e5;
+}
+
+.research-section h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.research-section p {
+    max-width: 800px;
+    margin-bottom: 0.75rem;
+}
+
+.research-links {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.research-links li {
+    margin-bottom: 0.5rem;
+}
+
+/* Our Story */
+
+.founders-section {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.founder-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.founder-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.founder-card p {
+    margin: 0 0 0.75rem;
+}
+
+.founder-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.embedded-highlight {
+    padding: 2rem;
+    background-color: #f0f4fa;
+    border-top: 1px solid #d0d7e5;
+    border-bottom: 1px solid #d0d7e5;
+}
+
+.embedded-highlight h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.embedded-highlight p {
+    max-width: 800px;
+    margin-bottom: 0.75rem;
+}
+
+.contact-summary {
+    padding: 2rem;
+    background-color: #ffffff;
 }
 
 /* Footer */
+
 .site-footer {
-  padding: 1.5rem 3rem;
-  border-top: 1px solid #1b2335;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #9fb3d9;
+    padding: 1rem 2rem;
+    background-color: #0b1b2b;
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-align: center;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .main-nav {
-    margin-top: 0.75rem;
-  }
-
-  .hero {
-    flex-direction: column;
-  }
-
-  .hero-image img {
-    max-width: 100%;
-  }
-}
-
-/* Add spacing under the "What We Do" heading */
-.what-we-do h2 {
-  margin-bottom: 1.5rem;
-}
-
-/* Extra spacing under the What We Do paragraph */
-.what-we-do p {
-  margin-bottom: 2rem;
-}
-
-
