@@ -253,3 +253,9 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+/* Extra spacing under the What We Do paragraph */
+.what-we-do p {
+  margin-bottom: 2rem;
+}
+
+
