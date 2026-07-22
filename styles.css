@@ -247,3 +247,9 @@ a:hover {
     max-width: 100%;
   }
 }
+
+/* Add spacing under the "What We Do" heading */
+.what-we-do h2 {
+  margin-bottom: 1.5rem;
+}
+
