@@ -247,3 +247,19 @@ a:hover {
     max-width: 100%;
   }
 }
+
+
+
+/* Two‑column layout for the final row */
+.tech-row-wide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Make the Electrostamping card span two columns */
+.tech-card.wide {
+  grid-column: span 2;
+}
+
