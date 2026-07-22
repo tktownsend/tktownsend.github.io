@@ -1,0 +1,249 @@
+/* Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #05070b;
+  color: #e5e9f5;
+  line-height: 1.6;
+}
+
+a {
+  color: #7cfb9b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+  background: #05070b;
+  border-bottom: 1px solid #1b2335;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-block img {
+  height: 56px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.logo-tagline {
+  font-size: 0.85rem;
+  color: #9fb3d9;
+}
+
+.main-nav a {
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c7d2f5;
+}
+
+.main-nav a.active {
+  color: #7cfb9b;
+  border-bottom: 2px solid #7cfb9b;
+  padding-bottom: 0.25rem;
+}
+
+.hero,
+.page-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 3rem 2rem;
+  gap: 2.5rem;
+}
+
+.page-hero {
+  flex-direction: column;
+}
+
+.hero-content h1,
+.page-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p,
+.page-hero p {
+  max-width: 720px;
+  color: #c7d2f5;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image img {
+  max-width: 380px;
+  border-radius: 8px;
+  border: 1px solid #1b2335;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #9fb3d9;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2af598, #009efd);
+  color: #05070b;
+}
+
+.btn-secondary {
+  border: 1px solid #7cfb9b;
+  color: #7cfb9b;
+}
+
+/* Sections */
+.identifiers,
+.what-we-do,
+.story-section,
+.leadership-grid,
+.photo-strip,
+.capabilities-grid,
+.tech-section,
+.contact-grid,
+.download-section {
+  padding: 2rem 3rem;
+}
+
+.identifiers h2,
+.what-we-do h2,
+.story-section h2,
+.leadership-grid h2,
+.photo-strip h2,
+.capabilities-grid h1,
+.capabilities-grid h2,
+.tech-section h1,
+.tech-section h2,
+.contact-grid h1,
+.contact-grid h2,
+.download-section h2 {
+  margin-bottom: 1rem;
+}
+
+.id-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.id-item {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background: #0b1020;
+  border: 1px solid #1b2335;
+}
+
+/* Feature / Capability cards */
+.feature-grid,
+.capabilities-grid,
+.leadership-grid,
+.photo-strip .photo-grid,
+.tech-section,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card,
+.capability-card,
+.leader-card,
+.tech-card,
+.contact-card {
+  background: #0b1020;
+  border-radius: 8px;
+  border: 1px solid #1b2335;
+  padding: 1.25rem;
+}
+
+.feature-card h3,
+.capability-card h2,
+.leader-card h3,
+.tech-card h2,
+.contact-card h2 {
+  margin-bottom: 0.75rem;
+}
+
+.leader-card img,
+.capability-card img,
+.tech-card img,
+.photo-strip img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+/* Footer */
+.site-footer {
+  padding: 1.5rem 3rem;
+  border-top: 1px solid #1b2335;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9fb3d9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    margin-top: 0.75rem;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}
